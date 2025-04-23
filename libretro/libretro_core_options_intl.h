@@ -60,6 +60,85 @@ extern "C" {
 /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
 
 /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
+struct retro_core_option_definition option_defs_chs[] = {
+
+   {
+      "vbanext_bios",
+      "如果可用使用BIOS（需要重启）",
+      "使用RetroArch系统目录中的BIOS文件。",
+      {
+         { "enabled", NULL },
+         { "disabled", NULL },
+         { NULL, NULL},
+      },
+      "enabled"
+   },
+   {
+      "vbanext_rtc",
+      "强制启用实时时钟（需要重启）",
+      "对未知的ROM强制启用实时时钟。该选项有助于需要实时时钟的修改版游戏（例如修改版宝可梦）。",
+      {
+         { "auto", "自动" },
+         { "enabled", NULL },
+         { NULL, NULL},
+      },
+      "auto"
+   },
+#ifdef USE_FRAME_SKIP
+   {
+      "vbanext_frameskip",
+      "跳帧",
+      "",
+      {
+         { "0",         NULL },
+         { "1/3",          NULL },
+         { "1/2",          NULL },
+         { "1",          NULL },
+         { "2",          NULL },
+         { "3",          NULL },
+         { "4",          NULL },
+         { NULL, NULL},
+      },
+      "0"
+   },
+#endif
+   {
+        "vbanext_turboenable",
+        "启用连发键",
+        "启用或者禁用手柄连发键。",
+        {
+            { "disabled", NULL },
+            { "enabled",  NULL },
+            { NULL, NULL },
+        },
+        "disabled"
+    },
+    {
+        "vbanext_turbodelay",
+        "连发速度",
+        "连发帧数频率，值越高连发速度越快。",
+        {
+            { "1",  NULL },
+            { "2",  NULL },
+            { "3",  NULL },
+            { "4",  NULL },
+            { "5",  NULL },
+            { "6",  NULL },
+            { "7",  NULL },
+            { "8",  NULL },
+            { "9",  NULL },
+            { "10", NULL },
+            { "11", NULL },
+            { "12", NULL },
+            { "13", NULL },
+            { "14", NULL },
+            { "15", NULL },
+            { NULL, NULL },
+        },
+        "2"
+    },
+   { NULL, NULL, NULL, {{0}}, NULL },
+};
 
 /* RETRO_LANGUAGE_ESPERANTO */
 
